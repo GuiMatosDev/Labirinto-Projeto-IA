@@ -15,6 +15,6 @@ cor_debug = (200, 200, 50)
 cor_personagem = (255, 0, 0) #Temporário
 cor_vermelho = (255, 0, 0)
 
-debug = True
+debug = False
 
 

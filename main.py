@@ -55,8 +55,6 @@ def main():
         desenhar_mapa(tela, mapa, cam_coluna, cam_linha, mapa_coluna, mapa_linha)
         
         npc_campones.step(mapa)
-        if debug == True:
-            npc_campones.mover_teclado(teclas, mapa)
         npc_campones.desenhar(tela, cam_coluna, cam_linha)
 
         

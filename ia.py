@@ -1,12 +1,11 @@
 import heapq
 from collections import deque
 
-# ---------- utilitários ----------
+#Funções Auxiliares
 def dentro_limites(x, y, mapa):
     return 0 <= y < len(mapa) and 0 <= x < len(mapa[0])
 
 def vizinhos_4(x, y, mapa):
-    # retorna vizinhos (x,y) em 4-direções (direita, esquerda, baixo, cima)
     direcoes = [(1,0), (-1,0), (0,1), (0,-1)]
     for dx, dy in direcoes:
         nx, ny = x + dx, y + dy
@@ -18,8 +17,8 @@ def heuristica_manhattan(a, b):
     bx, by = b
     return abs(ax - bx) + abs(ay - by)
 
+#Algoritmo de A*
 def a_star(mapa, inicio, objetivo):
-    """retorna caminho como lista de posições ou None"""
     if inicio == objetivo:
         return [inicio]
 
@@ -53,9 +52,8 @@ def a_star(mapa, inicio, objetivo):
 
     return None
 
-# ---------- converter caminho em passos (dx,dy) ----------
+#Converte o caminho em coordernadas
 def caminho_para_passos(path):
-    """recebe lista de posições e retorna lista de (dx,dy) passos"""
     passos = []
     for (x0,y0), (x1,y1) in zip(path, path[1:]):
         passos.append((x1 - x0, y1 - y0))

@@ -21,7 +21,6 @@ class campones:
         self.index_passos = 0  # posição atual na fila
 
     def set_path_from_positions(self, pos_list):
-        """pos_list = [(x0,y0), (x1,y1), ...]"""
         if not pos_list or len(pos_list) < 2:
             self.path_passos = []
             self.index_passos = 0
@@ -30,12 +29,12 @@ class campones:
         self.index_passos = 0
 
     def step(self, mapa):
-        """Executa 1 passo do path (se houver). Retorna True se moveu."""
         if self.index_passos >= len(self.path_passos):
             return False
         dx, dy = self.path_passos[self.index_passos]
-        
-        if mapa[self.y + dy][self.x + dx] == 0:  # opcional, evita mover em parede
+
+        #Garante que o caminho é possível
+        if mapa[self.y + dy][self.x + dx] == 0:  
             self.x += dx * self.velocidade
             self.y += dy * self.velocidade
         else:
