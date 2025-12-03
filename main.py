@@ -35,6 +35,9 @@ def main():
     #Objetivo recebendo valor/cor na grade
     mapa[objetivo_y][objetivo_x] = 2
 
+    
+
+
     #Loop de Execução Global
     loop = True
     while loop:
