@@ -67,7 +67,7 @@ def criar_mapa(colunas, linhas):
         mapa[10][linha] = 1'''
 
     #Labirinto
-    #gerar_labirinto(mapa)
+    gerar_labirinto(mapa)
             
     return mapa
 
