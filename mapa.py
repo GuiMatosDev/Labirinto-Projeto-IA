@@ -16,18 +16,18 @@ def gerar_labirinto(mapa):
         for x in range(largura):
             mapa[y][x] = 1
 
-    # Posições com passo 2 (células "válidas" para cavar)
+    #Inicio do Labirinto
     pilha = []
     pilha_x, pilha_y = 1, 1
 
-    # Protege limites: se o mapa for par em largura/altura, ajuste start
+    # Limites
     if pilha_x >= largura or pilha_y >= altura:
         return mapa
 
     mapa[pilha_y][pilha_x] = 0
     pilha.append((pilha_x, pilha_y))
 
-    #Enquanto tiver elementos na linha
+    #Enquanto tiver elementos na pilha
     while pilha:
         x, y = pilha[-1]
 
@@ -49,6 +49,7 @@ def gerar_labirinto(mapa):
                 moved = True
                 break
 
+        #Se não encontrou mais caminhos, encerra 
         if not moved:
             pilha.pop()
 
@@ -66,7 +67,7 @@ def criar_mapa(colunas, linhas):
         mapa[10][linha] = 1'''
 
     #Labirinto
-    gerar_labirinto(mapa)
+    #gerar_labirinto(mapa)
             
     return mapa
 
