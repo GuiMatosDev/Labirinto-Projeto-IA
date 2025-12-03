@@ -38,6 +38,8 @@ Criação do labirinto e Caminho Encontrado<img width="1500" height="500" alt="c
 
 <img width="800" height="500" alt="caminho" src="https://github.com/user-attachments/assets/e0146a21-936a-4014-9414-d5a3d7b8c815" />
 
+No primeiro gráfico o algoritmo preenche toda a grade com obstáculo de depois vai esculpindo transformando obstáculo em caminho.
+No segundo gráfico o algoritmo calcula o melhor caminho do inicio ao objetivo e devolve a rota em passo a passo.
 
 
 ## 🏗️ Estrutura
